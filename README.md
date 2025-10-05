@@ -4,13 +4,13 @@ A lightweight, TypeScript-first React component for embedding Twitch streams and
 
 ## Features
 
-✨ **Simple API** - Just one component with intuitive props  
-🎯 **TypeScript** - Full type safety and IntelliSense support  
-🔒 **Auto-detection** - Parent domain automatically detected  
-📱 **Responsive** - Support for both fixed and percentage-based sizing  
-🎨 **Themeable** - Light and dark themes built-in  
-⚡ **Zero Dependencies** - Only React as peer dependency  
-🏗️ **Modern Build** - ESM and CommonJS outputs
+**Simple API** - Just one component with intuitive props  
+**TypeScript** - Full type safety and IntelliSense support  
+**Auto-detection** - Parent domain automatically detected  
+**Responsive** - Support for both fixed and percentage-based sizing  
+**Themeable** - Light and dark themes built-in  
+**Zero Dependencies** - Only React as peer dependency  
+**Modern Build** - ESM and CommonJS outputs
 
 ## Installation
 
