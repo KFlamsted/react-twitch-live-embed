@@ -1,0 +1,25 @@
+# Source files
+src/
+stories/
+.storybook/
+
+# Config files
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+.gitignore
+.npmignore
+
+# Documentation (keep for npm)
+# README.md
+# LICENSE
+# CHANGELOG.md
+
+# Development
+*.log
+node_modules/
+.vscode/
+.idea/
+
+# Files to include
+# dist/ (included via files field in package.json)
