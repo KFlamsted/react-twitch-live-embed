@@ -1,0 +1,30 @@
+Title:
+react-twitch-live-embed
+
+Description
+This project is a npm package that embeds twitch using react.
+The key is that it's a single component, that exposes twitch embed (see https://dev.twitch.tv/docs/embed/everything/) in form of a component (<TwitchLive>)
+Implementation is going to be an iFrame that embeds twitch.
+
+Be aware
+
+The tech stack
+- typescript
+- react 18+
+- Vite
+- Storybook - Simple implementation to showcase the embedded twitch player and all the parameters
+
+Documentation for embedding twitch
+https://dev.twitch.tv/docs/embed/everything/
+
+
+Properties that I want to be in the main component (these should be a part of the default twitch embed):
+allowfullscreen - boolean. If true, the player can go full screen. Default: true.
+autoplay - boolean. If true, the video starts playing automatically, without the viewer clicking play. Minimum size requirements and visibility are necessary for autoplay to begin. The exception is mobile devices, on which video cannot be played without user interaction. Default: true.
+channel - string. Name of the chat room and channel.
+height - number or string. Height of the rendered element, in pixels. This can be expressed as a percentage as well, by passing a string like 50%. Minimum: 300. Default: 480.
+muted - boolean. Specifies whether the initial state of the video is muted. Default: false.
+parent - string[]. Required if your site is embedded on any domain(s) other than the one that instantiates the Twitch embed.Example parent parameter: ["streamernews.example.com", "embed.example.com"].
+theme - string. The Twitch embed color theme to use. Valid values: light or dark. Default: dark.
+time - string. Time in the video where playback starts. Specifies hours, minutes, and seconds. Default: 0h0m0s (the start of the video).
+width - number or string. Width of the rendered element, in pixels. This can be expressed as a percentage as well, by passing a string like 100%. Minimum: 400. Default: 940.
