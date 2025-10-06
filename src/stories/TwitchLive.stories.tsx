@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { TwitchLive } from '../components/TwitchLive';
+import type { Meta, StoryObj } from '@storybook/react'
+import { TwitchLive } from '../components/TwitchLive'
 
 /**
  * The TwitchLive component allows you to embed Twitch streams and channels
  * into your React application with full TypeScript support.
- * 
+ *
  * ## Features
  * - Automatic parent domain detection
  * - Responsive sizing (px or %)
@@ -18,7 +18,8 @@ const meta = {
     layout: 'centered',
     docs: {
       description: {
-        component: 'A React component for embedding Twitch streams with full TypeScript support.',
+        component:
+          'A React component for embedding Twitch streams with full TypeScript support.',
       },
     },
   },
@@ -30,7 +31,8 @@ const meta = {
     },
     parent: {
       control: 'object',
-      description: 'Parent domain(s) for embed security. Auto-detected if not provided.',
+      description:
+        'Parent domain(s) for embed security. Auto-detected if not provided.',
     },
     theme: {
       control: 'select',
@@ -70,10 +72,10 @@ const meta = {
       description: 'Custom ID for the iframe',
     },
   },
-} satisfies Meta<typeof TwitchLive>;
+} satisfies Meta<typeof TwitchLive>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 /**
  * Basic usage with default settings.
@@ -82,10 +84,11 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     channel: 'monstercat',
-    width: 800,
-    height: 450,
+    width: '',
+    height: '',
+    allowFullscreen: true,
   },
-};
+}
 
 /**
  * Light theme variant for lighter website designs.
@@ -97,7 +100,7 @@ export const LightTheme: Story = {
     height: 450,
     theme: 'light',
   },
-};
+}
 
 /**
  * Starts muted - useful for autoplay scenarios.
@@ -110,7 +113,7 @@ export const MutedAutoplay: Story = {
     muted: true,
     autoplay: true,
   },
-};
+}
 
 /**
  * No autoplay - user must click to start the stream.
@@ -122,7 +125,7 @@ export const NoAutoplay: Story = {
     height: 450,
     autoplay: false,
   },
-};
+}
 
 /**
  * Responsive width using percentage.
@@ -136,12 +139,14 @@ export const ResponsiveWidth: Story = {
   },
   decorators: [
     (Story) => (
-      <div style={{ width: '800px', border: '1px dashed #ccc', padding: '20px' }}>
+      <div
+        style={{ width: '800px', border: '1px dashed #ccc', padding: '20px' }}
+      >
         <Story />
       </div>
     ),
   ],
-};
+}
 
 /**
  * Compact size for sidebars or smaller spaces.
@@ -152,7 +157,7 @@ export const CompactSize: Story = {
     width: 400,
     height: 300,
   },
-};
+}
 
 /**
  * Large display for main content areas.
@@ -163,7 +168,7 @@ export const LargeDisplay: Story = {
     width: 1280,
     height: 720,
   },
-};
+}
 
 /**
  * Starting at a specific time (useful for VODs).
@@ -176,7 +181,7 @@ export const WithStartTime: Story = {
     height: 450,
     time: '0h5m0s',
   },
-};
+}
 
 /**
  * With custom CSS class for additional styling.
@@ -201,7 +206,7 @@ export const WithCustomClass: Story = {
       </>
     ),
   ],
-};
+}
 
 /**
  * Explicit parent domains for production environments.
@@ -214,4 +219,4 @@ export const WithExplicitParent: Story = {
     height: 450,
     parent: ['localhost', 'example.com', 'www.example.com'],
   },
-};
+}

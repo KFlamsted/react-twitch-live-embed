@@ -27,7 +27,9 @@
     "preview": "vite preview",
     "prepublishOnly": "npm run build",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\""
   },
   "keywords": [
     "react",
@@ -65,15 +67,16 @@
     "@types/react": "19.2.0",
     "@types/react-dom": "19.2.0",
     "@vitejs/plugin-react": "5.0.4",
+    "@vitest/browser": "3.2.4",
+    "@vitest/coverage-v8": "3.2.4",
+    "playwright": "1.55.1",
+    "prettier": "3.6.2",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "storybook": "9.1.10",
     "typescript": "5.9.3",
     "vite": "7.1.9",
     "vite-plugin-dts": "4.5.4",
-    "vitest": "3.2.4",
-    "@vitest/browser": "3.2.4",
-    "playwright": "1.55.1",
-    "@vitest/coverage-v8": "3.2.4"
+    "vitest": "3.2.4"
   }
 }

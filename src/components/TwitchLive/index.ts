@@ -1,2 +1,2 @@
-export { TwitchLive } from './TwitchLive';
-export type { TwitchLiveProps } from './TwitchLive.types';
+export { TwitchLive } from './TwitchLive'
+export type { TwitchLiveProps } from './TwitchLive.types'

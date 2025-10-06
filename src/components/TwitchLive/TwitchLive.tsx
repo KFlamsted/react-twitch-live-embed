@@ -1,15 +1,15 @@
-import React from 'react';
-import type { TwitchLiveProps } from './TwitchLive.types';
-import { buildEmbedUrl, normalizeDimension } from '../../utils/buildEmbedUrl';
+import React from 'react'
+import type { TwitchLiveProps } from './TwitchLive.types'
+import { buildEmbedUrl, normalizeDimension } from '../../utils/buildEmbedUrl'
 
 /**
  * TwitchLive component - Embeds a Twitch stream or channel
- * 
+ *
  * @example
  * ```tsx
- * <TwitchLive 
- *   channel="shroud" 
- *   width={800} 
+ * <TwitchLive
+ *   channel="shroud"
+ *   width={800}
  *   height={450}
  * />
  * ```
@@ -36,11 +36,11 @@ export const TwitchLive: React.FC<TwitchLiveProps> = ({
     muted,
     theme,
     time,
-  });
+  })
 
   // Normalize dimensions
-  const normalizedWidth = normalizeDimension(width);
-  const normalizedHeight = normalizeDimension(height);
+  const normalizedWidth = normalizeDimension(width)
+  const normalizedHeight = normalizeDimension(height)
 
   return (
     <iframe
@@ -55,7 +55,7 @@ export const TwitchLive: React.FC<TwitchLiveProps> = ({
       }}
       title={`Twitch stream for ${channel}`}
     />
-  );
-};
+  )
+}
 
-TwitchLive.displayName = 'TwitchLive';
+TwitchLive.displayName = 'TwitchLive'

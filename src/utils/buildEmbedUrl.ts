@@ -1,9 +1,11 @@
-import type { TwitchLiveProps } from '../components/TwitchLive/TwitchLive.types';
+import type { TwitchLiveProps } from '../components/TwitchLive/TwitchLive.types'
 
 /**
  * Builds the Twitch embed URL with all query parameters
  */
-export function buildEmbedUrl(props: Omit<TwitchLiveProps, 'width' | 'height' | 'className' | 'id'>): string {
+export function buildEmbedUrl(
+  props: Omit<TwitchLiveProps, 'width' | 'height' | 'className' | 'id'>
+): string {
   const {
     channel,
     parent,
@@ -12,10 +14,11 @@ export function buildEmbedUrl(props: Omit<TwitchLiveProps, 'width' | 'height' | 
     muted = false,
     theme = 'dark',
     time = '0h0m0s',
-  } = props;
+  } = props
 
   // Get parent domains - default to current hostname if available
-  const parentDomains = parent ?? (typeof window !== 'undefined' ? [window.location.hostname] : []);
+  const parentDomains =
+    parent ?? (typeof window !== 'undefined' ? [window.location.hostname] : [])
 
   // Build query parameters
   const params = new URLSearchParams({
@@ -23,23 +26,23 @@ export function buildEmbedUrl(props: Omit<TwitchLiveProps, 'width' | 'height' | 
     autoplay: autoplay ? 'true' : 'false',
     muted: muted ? 'true' : 'false',
     time,
-  });
+  })
 
   // Add parent domains (can be multiple)
   parentDomains.forEach((domain) => {
-    params.append('parent', domain);
-  });
+    params.append('parent', domain)
+  })
 
   // Add optional parameters
   if (theme) {
-    params.append('theme', theme);
+    params.append('theme', theme)
   }
 
   if (!allowFullscreen) {
-    params.append('allowfullscreen', 'false');
+    params.append('allowfullscreen', 'false')
   }
 
-  return `https://player.twitch.tv/?${params.toString()}`;
+  return `https://player.twitch.tv/?${params.toString()}`
 }
 
 /**
@@ -48,5 +51,5 @@ export function buildEmbedUrl(props: Omit<TwitchLiveProps, 'width' | 'height' | 
  * @returns CSS dimension string
  */
 export function normalizeDimension(value: number | string): string {
-  return typeof value === 'number' ? `${value}px` : value;
+  return typeof value === 'number' ? `${value}px` : value
 }
