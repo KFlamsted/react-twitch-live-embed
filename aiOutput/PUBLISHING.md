@@ -48,12 +48,12 @@ If you've created a GitHub repository:
 ```json
 "repository": {
   "type": "git",
-  "url": "git+https://github.com/yourusername/react-twitch-live-embed.git"
+  "url": "git+https://github.com/KFlamsted/react-twitch-live-embed.git"
 },
 "bugs": {
-  "url": "https://github.com/yourusername/react-twitch-live-embed/issues"
+  "url": "https://github.com/KFlamsted/react-twitch-live-embed/issues"
 },
-"homepage": "https://github.com/yourusername/react-twitch-live-embed#readme",
+"homepage": "https://github.com/KFlamsted/react-twitch-live-embed#readme",
 ```
 
 ### 3. Update README Links
@@ -132,7 +132,7 @@ If you want to publish under your username/organization:
 
 1. Change the package name in `package.json`:
    ```json
-   "name": "@yourusername/react-twitch-live-embed"
+   "name": "@KFlamsted/react-twitch-live-embed"
    ```
 
 2. Publish as public:
