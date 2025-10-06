@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { TwitchLive } from '../components/TwitchLive'
 
+const defaultChannelValue = 'monstercat'
+
 /**
  * The TwitchLive component allows you to embed Twitch streams and channels
  * into your React application with full TypeScript support.
@@ -83,7 +85,7 @@ type Story = StoryObj<typeof meta>
  */
 export const Default: Story = {
   args: {
-    channel: 'monstercat',
+    channel: defaultChannelValue,
     width: '',
     height: '',
     allowFullscreen: true,
@@ -95,7 +97,7 @@ export const Default: Story = {
  */
 export const LightTheme: Story = {
   args: {
-    channel: 'monstercat',
+    channel: defaultChannelValue,
     width: 800,
     height: 450,
     theme: 'light',
@@ -107,7 +109,7 @@ export const LightTheme: Story = {
  */
 export const MutedAutoplay: Story = {
   args: {
-    channel: 'monstercat',
+    channel: defaultChannelValue,
     width: 800,
     height: 450,
     muted: true,
@@ -120,7 +122,7 @@ export const MutedAutoplay: Story = {
  */
 export const NoAutoplay: Story = {
   args: {
-    channel: 'monstercat',
+    channel: defaultChannelValue,
     width: 800,
     height: 450,
     autoplay: false,
@@ -133,7 +135,7 @@ export const NoAutoplay: Story = {
  */
 export const ResponsiveWidth: Story = {
   args: {
-    channel: 'monstercat',
+    channel: defaultChannelValue,
     width: '100%',
     height: 450,
   },
@@ -153,7 +155,7 @@ export const ResponsiveWidth: Story = {
  */
 export const CompactSize: Story = {
   args: {
-    channel: 'monstercat',
+    channel: defaultChannelValue,
     width: 400,
     height: 300,
   },
@@ -164,7 +166,7 @@ export const CompactSize: Story = {
  */
 export const LargeDisplay: Story = {
   args: {
-    channel: 'monstercat',
+    channel: defaultChannelValue,
     width: 1280,
     height: 720,
   },
@@ -176,7 +178,7 @@ export const LargeDisplay: Story = {
  */
 export const WithStartTime: Story = {
   args: {
-    channel: 'monstercat',
+    channel: defaultChannelValue,
     width: 800,
     height: 450,
     time: '0h5m0s',
@@ -188,7 +190,7 @@ export const WithStartTime: Story = {
  */
 export const WithCustomClass: Story = {
   args: {
-    channel: 'monstercat',
+    channel: defaultChannelValue,
     width: 800,
     height: 450,
     className: 'custom-twitch-embed',
@@ -214,7 +216,7 @@ export const WithCustomClass: Story = {
  */
 export const WithExplicitParent: Story = {
   args: {
-    channel: 'monstercat',
+    channel: defaultChannelValue,
     width: 800,
     height: 450,
     parent: ['localhost', 'example.com', 'www.example.com'],
